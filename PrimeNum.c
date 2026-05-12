@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <math.h>
 #include <stdlib.h>
+#include "validate_func.h"
 
 int get_validated_num() {
     char buffer[100];
@@ -28,7 +29,10 @@ int get_validated_num() {
 
 int main() {
 
-    int num = get_validated_num();
+   // int num = get_validated_num();
+
+    int num = validate("Enter a Number: ","Invalid input. Please enter a Valid Whole Number.", 0,0);
+
     bool isPrime = true;
 
     if (num <= 1) { isPrime = false; } 
